@@ -1,11 +1,8 @@
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+const factoryBook = (title, author, pages, read) => {
+  return {title, author, pages, read};
 }
 
 function saveLocal() {
@@ -115,7 +112,7 @@ function addNewBook() {
   const author = inputs[1].value;
   const pages = inputs[2].value;
   const read = swap(inputs[3].checked);
-  const book = new Book(title, author, pages, read);
+  const book = factoryBook(title, author, pages, read);
   addBookToLibrary(book);
 }
 
