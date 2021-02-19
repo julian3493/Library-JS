@@ -8,7 +8,7 @@ class Book {
     this.pages = pages;
     this.read = read;
   }
-} 
+}
 
 function saveLocal() {
   localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
